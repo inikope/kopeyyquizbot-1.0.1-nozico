@@ -331,8 +331,13 @@ app.get('/', (req, res) => {
                             ));            
                     }
             }
+        } else {
+            switch(receivedMessage){
+                case '/user':
+                    return replyText(event.replyToken, event.source.userId);
+            }
         }
-        }
+    }
   }
   }  
   // listen on port
