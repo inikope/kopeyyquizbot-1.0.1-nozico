@@ -41,12 +41,12 @@ app.get('/', (req, res) => {
     
     function startSoal(replyToken,nomor){
         const linkSatu = "https://1.bp.blogspot.com/-Qot9XEIeoxs/Xk69IfL1VnI/AAAAAAAAJBM/yGAskJGeey8farTlSwJoOvfaeL4GToDQgCLcBGAsYHQ/s1600/KQBot-1.jpg";
-        const linkDua = "https://drive.google.com/file/d/1wINkuGF2XdI2krfqQWvXjkcv0ipvNNTy/preview";
-        const linkTiga = "https://www.mboxdrive.com/KQBot-3.mp3";
+        const linkDua = "https://audio.jukehost.co.uk/3147c1b3d541ce112d79a11c26f9e77b3c6f4d75/ea92850ed5e";
+        const linkTiga = "https://audio.jukehost.co.uk/3147c1b3d541ce112d79a11c26f9e77b3c6f4d75/3678da37770";
         const linkEmpat = "https://1.bp.blogspot.com/-qreeSzd8eD4/Xk7Gw1T8PTI/AAAAAAAAJBY/_PgDKZfQofwhWiw0SsJ7G7FD41Jpp5txwCLcBGAsYHQ/s1600/KQBot-4.jpg";
-        const linkLima = "https://drive.google.com/file/d/1r_IWV6xCVHGstlmTG9BYT-A3kP1scyH2/preview";
-        const linkEnam = "https://drive.google.com/file/d/19RMDf7C56l5C37Pv9a41Evl-ReCTM6eH/preview";
-        const linkTujuh = "https://drive.google.com/file/d/1lf2ziGDld2ukpR1FmNNnOp-pHobCv8ib/preview";
+        const linkLima = "https://audio.jukehost.co.uk/3147c1b3d541ce112d79a11c26f9e77b3c6f4d75/2557d472608";
+        const linkEnam = "https://audio.jukehost.co.uk/3147c1b3d541ce112d79a11c26f9e77b3c6f4d75/f9b55b5fbb4";
+        const linkTujuh = "https://audio.jukehost.co.uk/3147c1b3d541ce112d79a11c26f9e77b3c6f4d75/4d603c666e9";
         const linkDelapan = "https://1.bp.blogspot.com/-cbdST_XrVuQ/Xk7PI4LHucI/AAAAAAAAJBk/MfyOl8uYMPkZixeKQcmxuhFs5XwIspKCwCLcBGAsYHQ/s1600/KQBot-8.jpg";
         const linkSembilan = "https://1.bp.blogspot.com/-sriT9UhPLB8/Xk7RDcbA_WI/AAAAAAAAJBw/IyM3XQVJmRoPrcXYVow86gGOYiVwMN-LgCLcBGAsYHQ/s1600/KQBot-9.jpg";
         const linkSepuluh = "https://jkt48.com/profile/diani.jpg";
