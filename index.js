@@ -193,10 +193,11 @@ app.get('/', (req, res) => {
         } else {
             if(receivedMessage.includes(" ")){
             var index = receivedMessage.indexOf(' ');
-            var [first, second] = [str.slice(0, index), str.slice(index + 1)];
+            var [first, second] = [receivedMessage.slice(0, index), receivedMessage.slice(index + 1)];
             switch (first){
                 case '/ans1':
-                    if(second === "Fannisa"){
+                    switch(second) {
+                        case "Fannisa":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
@@ -204,7 +205,8 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans2':
-                    if(second.toLowerCase === "jkt48 - rapsodi"){
+                    switch(second.toLowerCase) {
+                        case "jkt48 - rapsodi":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
@@ -212,7 +214,8 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans3':
-                    if(second.toLowerCase === "lost sky - where we started"){
+                    switch(second.toLowerCase) {
+                        case "lost sky - where we started":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
@@ -220,7 +223,8 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans4':
-                    if(second.toLowerCase === "kayang"){
+                    switch(second.toLowerCase) {
+                        case "kayang":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
@@ -228,7 +232,8 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans5':
-                    if(second.toLowerCase === "ariana grande - god is a woman"){
+                    switch(second.toLowerCase){
+                    case "ariana grande - god is a woman":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
@@ -236,7 +241,8 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans6':
-                    if(second.toLowerCase === "daniel kawadatha - black lies"){
+                    switch(second.toLowerCase){
+                    case "daniel kawadatha - black lies":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
@@ -244,31 +250,59 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans7':
-                    if(second.toLowerCase === "sak tenane ra ngapusi isih tresno sliramu" || second.toLowerCase === "sak tenane rak ngapusi isih tresno sliramu"){
-                        return client.getProfile(event.source.userId)
-                        .then((profile) => replyText(
-                            event.replyToken,
-                            [ `Soal 7: ${profile.displayName} benar!`]
-                        ));
+                    switch(second.toLowerCase){
+                        case 'sak tenane ra ngapusi isih tresno sliramu':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal 7: ${profile.displayName} benar!`]
+                            ));
+                        case 'sak tenane rak ngapusi isih tresno sliramu':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal 7: ${profile.displayName} benar!`]
+                            ));
                     }
                 case '/ans8':
-                    if(second.toLowerCase === "toilet bound hanako kun" || second.toLowerCase === "toilet bound hanako-kun"){
-                        return client.getProfile(event.source.userId)
-                        .then((profile) => replyText(
-                            event.replyToken,
-                            [ `Soal 8: ${profile.displayName} benar!`]
-                        ));
+                    switch(second.toLowerCase){
+                        case 'toilet bound hanako kun':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal 8: ${profile.displayName} benar!`]
+                            ));
+                        case 'toilet bound hanako-kun':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal 8: ${profile.displayName} benar!`]
+                            ));
                     }
                 case '/ans9':
-                    if(second.toLowerCase === "bloomiz" || second.toLowerCase === "bloom*iz" || second.toLowerCase === "bloom iz"){
-                        return client.getProfile(event.source.userId)
-                        .then((profile) => replyText(
-                            event.replyToken,
-                            [ `Soal 9: ${profile.displayName} benar!`]
-                        ));
-                    }
+                    switch(second.toLowerCase){
+                        case 'bloomiz':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal 9: ${profile.displayName} benar!`]
+                            ));
+                        case 'bloom*iz':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal 9: ${profile.displayName} benar!`]
+                            ));
+                        case 'bloom iz':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal 9: ${profile.displayName} benar!`]
+                            ));
+                        }
                 case '/ans10':
-                    if(second.toLowerCase === "diani amalia ramadhani"){
+                    switch(second.toLowerCase){
+                        case "diani amalia ramadhani":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
@@ -276,12 +310,25 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans11':
-                    if(second.toLowerCase === "lapu-lapu - mobile legends" || second.toLowerCase === "lapu lapu - mobile legends" || second.toLowerCase === "lapulapu - mobile legends"){
-                        return client.getProfile(event.source.userId)
-                        .then((profile) => replyText(
-                            event.replyToken,
-                            [ `Soal 10: ${profile.displayName} benar!`]
-                        ));
+                    switch(second.toLowerCase){
+                        case 'lapu-lapu - mobile legends':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal BONUS: ${profile.displayName} benar!`]
+                            ));
+                        case 'lapu lapu - mobile legends':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal BONUS: ${profile.displayName} benar!`]
+                            ));
+                        case 'lapulapu - mobile legends':
+                            return client.getProfile(event.source.userId)
+                            .then((profile) => replyText(
+                                event.replyToken,
+                                [ `Soal BONUS: ${profile.displayName} benar!`]
+                            ));            
                     }
             }
         }
