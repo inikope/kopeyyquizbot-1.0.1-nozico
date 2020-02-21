@@ -169,7 +169,7 @@ app.get('/', (req, res) => {
         return Promise.resolve(null);
     } else {
         const receivedMessage = event.message.text;
-        if (source.userId === "Ub7bc8bb30df94718f951360dec1a2a39") {
+        if (event.source.userId === "Ub7bc8bb30df94718f951360dec1a2a39") {
             // Admin only chat function
             if (receivedMessage.split(" ").length === 2){
                 const splitText = receivedMessage.split(" ");
@@ -197,7 +197,7 @@ app.get('/', (req, res) => {
             switch (first){
                 case '/ans1':
                     if(second === "Fannisa"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 1: ${profile.displayName} benar!`]
@@ -205,7 +205,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans2':
                     if(second.toLowerCase === "jkt48 - rapsodi"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 2: ${profile.displayName} benar!`]
@@ -213,7 +213,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans3':
                     if(second.toLowerCase === "lost sky - where we started"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 3: ${profile.displayName} benar!`]
@@ -221,7 +221,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans4':
                     if(second.toLowerCase === "kayang"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 4: ${profile.displayName} benar!`]
@@ -229,7 +229,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans5':
                     if(second.toLowerCase === "ariana grande - god is a woman"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 5: ${profile.displayName} benar!`]
@@ -237,7 +237,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans6':
                     if(second.toLowerCase === "daniel kawadatha - black lies"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 6: ${profile.displayName} benar!`]
@@ -245,7 +245,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans7':
                     if(second.toLowerCase === "sak tenane ra ngapusi isih tresno sliramu" || second.toLowerCase === "sak tenane rak ngapusi isih tresno sliramu"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 7: ${profile.displayName} benar!`]
@@ -253,7 +253,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans8':
                     if(second.toLowerCase === "toilet bound hanako kun" || second.toLowerCase === "toilet bound hanako-kun"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 8: ${profile.displayName} benar!`]
@@ -261,7 +261,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans9':
                     if(second.toLowerCase === "bloomiz" || second.toLowerCase === "bloom*iz" || second.toLowerCase === "bloom iz"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 9: ${profile.displayName} benar!`]
@@ -269,7 +269,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans10':
                     if(second.toLowerCase === "diani amalia ramadhani"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 10: ${profile.displayName} benar!`]
@@ -277,7 +277,7 @@ app.get('/', (req, res) => {
                     }
                 case '/ans11':
                     if(second.toLowerCase === "lapu-lapu - mobile legends" || second.toLowerCase === "lapu lapu - mobile legends" || second.toLowerCase === "lapulapu - mobile legends"){
-                        return client.getProfile(source.userId)
+                        return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 10: ${profile.displayName} benar!`]
