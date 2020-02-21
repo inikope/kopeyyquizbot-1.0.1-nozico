@@ -205,7 +205,7 @@ app.get('/', (req, res) => {
                                 .then(() => client.leaveRoom(event.source.roomId));
                         }
                     case '/prize':
-                        return client.replyMessage(replyToken, {
+                        return client.replyMessage(event.replyToken, {
                             type: "image", originalContentUrl: prizesFull, previewImageUrl: prizesPrev
                         })
                 }
