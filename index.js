@@ -169,7 +169,7 @@ app.get('/', (req, res) => {
         return Promise.resolve(null);
     } else {
         const receivedMessage = event.message.text;
-        if (event.source.userId === "U9f741c3b49c25d3f698fa228a5fb3380") {
+        if (event.source.userId === "-U9f741c3b49c25d3f698fa228a5fb3380") {
             // Admin only chat function
             if (receivedMessage.split(" ").length === 2){
                 const splitText = receivedMessage.split(" ");
@@ -178,7 +178,7 @@ app.get('/', (req, res) => {
                     case '/nyolot':
                         return replyText(event.replyToken, NyolotBalik + splitText[1]);
                     case '/soal':
-                        var soalNo = parseInt(spliText[1]);
+                        var soalNo = parseInt(splitText[1]);
                         return sendSoal(event.replyToken, soalNo);
                     case '/start':
                         var soalNo = parseInt(splitText[1]);
