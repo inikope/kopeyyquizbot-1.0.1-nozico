@@ -157,7 +157,8 @@ app.get('/', (req, res) => {
     const rules         = "- RULES -\n\n1. Selalu menjawab dengan format. Jawaban tanpa format tidak dianggap.\n2. Jawablah pertanyaan sesuai dengan apa yang ditanyakan.\n3. Dilarang menjawab pertanyaan selain yang sedang ditanyakan.\n4. Perhitungan poin akan dilakukan manual.\n5. Pemenang dengan poin terbanyak dapat memilih 1 hadiah yang disediakan.\n6. Pemenang dengan poin terbanyak kedua dan ketiga mendapat swan random.\n7. Gausah nyolot.\n8. Jangan emosi, gw bot, lu mo adu argumen sama gw jg ga bakal gw tanggepin.\n\nKalo ada soal audio muncul dan durasinya ditulis 1 menit, itu default dari LINE ya, audio aslinya ga sampe satu menit";
     const NyolotBalik   = "anjing lu, ";
     const introKuis     = "HEY YO WHAT'S UP GUYS!\nKenalin gw KQ:Bot, Kopeyy Quiz Bot!\n\nDi quiz kali ini, gw yang bakal ngasi pertanyaan-pertanyaan ke kalian!\n\nINGAT! Gw itu bot, kalo lu jawab ga sesuai format, ya gw ga bakal gubris\n\nDi setiap pertanyaan, format menjawabnya bakal berbeda. Jadi tolong di baca baik-baik! Matanya di pake!\n\nSIAP-SIAP!";
-    
+    const nyolotUsir    = "lo ngusir gw hah? enak aja";
+    const gwPinter      = "Yee lu kira gw goblok?";
 
 
 	if (event.type === 'follow'){
@@ -190,6 +191,17 @@ app.get('/', (req, res) => {
                         return replyText(event.replyToken, rules);
                     case '/intro':
                         return replyText(event.replyToken, introKuis);
+                    case '/bye':
+                        switch (event.source.type) {
+                            case 'user':
+                              return replyText(replyToken, 'Lawak lu bambank');
+                            case 'group':
+                              return replyText(replyToken, 'Bye bitches~')
+                                .then(() => client.leaveGroup(event.source.groupId));
+                            case 'room':
+                              return replyText(replyToken, 'Bye bitches~')
+                                .then(() => client.leaveRoom(event.source.roomId));
+                        }
                 }
             }
         } else {
@@ -281,6 +293,10 @@ app.get('/', (req, res) => {
                                 [ `Soal 8: ${profile.displayName} benar!`]
                             ));
                     }
+                case '/soal':
+                    return replyText(event.replyToken, gwPinter);
+                case '/start':
+                    return replyText(event.replyToken, gwPinter);
                 case '/ans9':
                     switch(second.toLowerCase){
                         case 'bloomiz':
@@ -337,6 +353,8 @@ app.get('/', (req, res) => {
             switch(receivedMessage){
                 case '/user':
                     return replyText(event.replyToken, event.source.userId);
+                case '/bye':
+                    return replyText(event.replyToken, nyolotUsir);
             }
         }
     }
