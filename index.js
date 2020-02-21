@@ -154,7 +154,7 @@ app.get('/', (req, res) => {
      
      //  Chats
     const Nyolot 		= "Hayo! Ngapain kamu?";
-    const rules         = "- RULES -\n\n1. Selalu menjawab dengan format. Jawaban tanpa format tidak dianggap.\n2. Jawablah pertanyaan sesuai dengan apa yang ditanyakan.\n3. Dilarang menjawab pertanyaan selain yang sedang ditanyakan.\n4. Perhitungan poin akan dilakukan manual.\n5. Pemenang dengan poin terbanyak dapat memilih 1 hadiah yang disediakan.\n6. Pemenang dengan poin terbanyak kedua dan ketiga mendapat swan random.\n7. Gausah nyolot.\n9. Jangan emosi, gw bot, lu mo adu argumen sama gw jg ga bakal gw tanggepin.";
+    const rules         = "- RULES -\n\n1. Selalu menjawab dengan format. Jawaban tanpa format tidak dianggap.\n2. Jawablah pertanyaan sesuai dengan apa yang ditanyakan.\n3. Dilarang menjawab pertanyaan selain yang sedang ditanyakan.\n4. Perhitungan poin akan dilakukan manual.\n5. Pemenang dengan poin terbanyak dapat memilih 1 hadiah yang disediakan.\n6. Pemenang dengan poin terbanyak kedua dan ketiga mendapat swan random.\n7. Gausah nyolot.\n8. Jangan emosi, gw bot, lu mo adu argumen sama gw jg ga bakal gw tanggepin.\n\nKalo ada soal audio muncul dan durasinya ditulis 1 menit, itu default dari LINE ya, audio aslinya ga sampe satu menit";
     const NyolotBalik   = "anjing lu, ";
     const introKuis     = "HEY YO WHAT'S UP GUYS!\nKenalin gw KQ:Bot, Kopeyy Quiz Bot!\nDi quiz ini, gw yang bakal ngasi pertanyaan-pertanyaan ke kalian!\n\nINGAT! Gw itu bot, kalo lu jawba ga sesuai format, ya gw ga bakal gubris\nDi setiap pertanyaan, format menjawabnya bakal berbeda. Jadi tolong di baca baik-baik\n\nSIAP-SIAP YA!";
     
