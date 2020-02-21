@@ -154,11 +154,13 @@ app.get('/', (req, res) => {
      
      //  Chats
     const Nyolot 		= "Hayo! Ngapain kamu?";
-    const rules         = "- RULES -\n\n1. Selalu menjawab dengan format. Jawaban tanpa format tidak dianggap.\n2. Jawablah pertanyaan sesuai dengan apa yang ditanyakan.\n3. Dilarang menjawab pertanyaan selain yang sedang ditanyakan.\n4. Perhitungan poin akan dilakukan manual.\n5. Pemenang dengan poin terbanyak dapat memilih 1 hadiah yang disediakan.\n6. Pemenang dengan poin terbanyak kedua dan ketiga mendapat swan random.\n7. Gausah nyolot.\n8. Jangan emosi, gw bot, lu mo adu argumen sama gw jg ga bakal gw tanggepin.\n\nKalo ada soal audio muncul dan durasinya ditulis 1 menit, itu default dari LINE ya, audio aslinya ga sampe satu menit";
+    const rules         = "- RULES -\n\n1. Selalu menjawab dengan format. Jawaban tanpa format tidak dianggap.\n2. Jawablah pertanyaan sesuai dengan apa yang ditanyakan.\n3. Dilarang menjawab pertanyaan selain yang sedang ditanyakan.\n4. Perhitungan poin akan dilakukan manual.\n5. Pemenang dengan poin terbanyak dapat memilih 1 hadiah yang disediakan (urutan memilih berdasarkan poin).\n6. Gausah nyolot.\n7. Jangan emosi, gw bot, lu mo adu argumen sama gw jg ga bakal gw tanggepin.\n\nKalo ada soal audio muncul dan durasinya ditulis 1 menit, itu default dari LINE ya, audio aslinya ga sampe satu menit";
     const NyolotBalik   = "anjing lu, ";
     const introKuis     = "HEY YO WHAT'S UP GUYS!\nKenalin gw KQ:Bot, Kopeyy Quiz Bot!\n\nDi quiz kali ini, gw yang bakal ngasi pertanyaan-pertanyaan ke kalian!\n\nINGAT! Gw itu bot, kalo lu jawab ga sesuai format, ya gw ga bakal gubris\n\nDi setiap pertanyaan, format menjawabnya bakal berbeda. Jadi tolong di baca baik-baik! Matanya di pake!\n\nSIAP-SIAP!";
     const nyolotUsir    = "lo ngusir gw hah? enak aja";
     const gwPinter      = "Yee lu kira gw goblok?";
+    const prizesFull    = "https://1.bp.blogspot.com/-FnOrna7kSFU/Xk98WAK0P4I/AAAAAAAAJCM/0D8aMlj6xiMG7waR9fqsxlk7jqkDbg-UgCLcBGAsYHQ/s1600/full.jpg";
+    const prizesPrev    = "https://1.bp.blogspot.com/-trR4IytZwpE/Xk98V680auI/AAAAAAAAJCI/kJSB7iBcc8Y72Q_bMH_gvhkw4gCi49aXQCLcBGAsYHQ/s1600/preview.jpg";
 
 
 	if (event.type === 'follow'){
@@ -202,6 +204,10 @@ app.get('/', (req, res) => {
                               return replyText(event.replyToken, 'Bye bitches~')
                                 .then(() => client.leaveRoom(event.source.roomId));
                         }
+                    case '/prize':
+                        return client.replyMessage(replyToken, {
+                            type: "image", originalContentUrl: prizesFull, previewImageUrl: prizesPrev
+                        })
                 }
             }
         } else {
