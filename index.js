@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
     function startSoal(replyToken,nomor){
         const linkSatu = "https://1.bp.blogspot.com/-Qot9XEIeoxs/Xk69IfL1VnI/AAAAAAAAJBM/yGAskJGeey8farTlSwJoOvfaeL4GToDQgCLcBGAsYHQ/s1600/KQBot-1.jpg";
         const linkDua = "https://drive.google.com/file/d/1wINkuGF2XdI2krfqQWvXjkcv0ipvNNTy/preview";
-        const linkTiga = "https://clyp.it/fcfr05bg";
+        const linkTiga = "https://www.mboxdrive.com/KQBot-3.mp3";
         const linkEmpat = "https://1.bp.blogspot.com/-qreeSzd8eD4/Xk7Gw1T8PTI/AAAAAAAAJBY/_PgDKZfQofwhWiw0SsJ7G7FD41Jpp5txwCLcBGAsYHQ/s1600/KQBot-4.jpg";
         const linkLima = "https://drive.google.com/file/d/1r_IWV6xCVHGstlmTG9BYT-A3kP1scyH2/preview";
         const linkEnam = "https://drive.google.com/file/d/19RMDf7C56l5C37Pv9a41Evl-ReCTM6eH/preview";
