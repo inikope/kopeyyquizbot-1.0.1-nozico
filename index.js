@@ -2,9 +2,6 @@
 const line = require('@line/bot-sdk');
 const express = require('express');
 var request = require("request");
-const instaProf = require('instagram-basic-data-scraper-with-username');
-const mista = require('mista');
-const instaDown = require('instagram-downloader');
 
 // create LINE SDK config from env variables
 const config = {
