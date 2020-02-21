@@ -194,12 +194,12 @@ app.get('/', (req, res) => {
                     case '/bye':
                         switch (event.source.type) {
                             case 'user':
-                              return replyText(replyToken, 'Lawak lu bambank');
+                              return replyText(event.replyToken, 'Lawak lu bambank');
                             case 'group':
-                              return replyText(replyToken, 'Bye bitches~')
+                              return replyText(event.replyToken, 'Bye bitches~')
                                 .then(() => client.leaveGroup(event.source.groupId));
                             case 'room':
-                              return replyText(replyToken, 'Bye bitches~')
+                              return replyText(event.replyToken, 'Bye bitches~')
                                 .then(() => client.leaveRoom(event.source.roomId));
                         }
                 }
@@ -355,6 +355,8 @@ app.get('/', (req, res) => {
                     return replyText(event.replyToken, event.source.userId);
                 case '/bye':
                     return replyText(event.replyToken, nyolotUsir);
+                case '/rules':
+                    return replyText(event.replyToken, rules);
             }
         }
     }
