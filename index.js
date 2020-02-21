@@ -188,6 +188,8 @@ app.get('/', (req, res) => {
                 switch (receivedMessage) {
                     case '/rules':
                         return replyText(event.replyToken, rules);
+                    case '/intro':
+                        return replyText(event.replyToken, introKuis);
                 }
             }
         } else {
