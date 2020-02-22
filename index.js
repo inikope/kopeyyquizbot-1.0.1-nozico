@@ -214,7 +214,7 @@ app.get('/', (req, res) => {
             var index = receivedMessage.indexOf(' ');
             var [first, second] = [receivedMessage.slice(0, index), receivedMessage.slice(index + 1)];
             console.log("first: "+first );
-            console.log("second: "+second.toLowerCase );
+            console.log("second: "+second.toLowerCase() );
             switch (first){
                 case '/ans1':
                     switch(second) {
@@ -226,7 +226,7 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans2':
-                    switch(second.toLowerCase) {
+                    switch(second.toLowerCase()) {
                         case "jkt48 - rapsodi":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
@@ -235,7 +235,7 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans3':
-                    switch(second.toLowerCase) {
+                    switch(second.toLowerCase()) {
                         case "lost sky - where we started":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
@@ -244,7 +244,7 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans4':
-                    switch(second.toLowerCase) {
+                    switch(second.toLowerCase()) {
                         case "kayang":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
@@ -253,7 +253,7 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans5':
-                    switch(second.toLowerCase){
+                    switch(second.toLowerCase()){
                     case "ariana grande - god is a woman":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
@@ -262,7 +262,7 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans6':
-                    switch(second.toLowerCase){
+                    switch(second.toLowerCase()){
                     case "daniel kawadatha - black lies":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
@@ -271,7 +271,7 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans7':
-                    switch(second.toLowerCase){
+                    switch(second.toLowerCase()){
                         case 'sak tenane ra ngapusi isih tresno sliramu':
                             return client.getProfile(event.source.userId)
                             .then((profile) => replyText(
@@ -286,7 +286,7 @@ app.get('/', (req, res) => {
                             ));
                     }
                 case '/ans8':
-                    switch(second.toLowerCase){
+                    switch(second.toLowerCase()){
                         case 'toilet bound hanako kun':
                             return client.getProfile(event.source.userId)
                             .then((profile) => replyText(
@@ -301,7 +301,7 @@ app.get('/', (req, res) => {
                             ));
                     }
                 case '/ans9':
-                    switch(second.toLowerCase){
+                    switch(second.toLowerCase()){
                         case 'bloomiz':
                             return client.getProfile(event.source.userId)
                             .then((profile) => replyText(
@@ -322,7 +322,7 @@ app.get('/', (req, res) => {
                             ));
                         }
                 case '/ans10':
-                    switch(second.toLowerCase){
+                    switch(second.toLowerCase()){
                         case "diani amalia ramadhani":
                         return client.getProfile(event.source.userId)
                         .then((profile) => replyText(
@@ -331,7 +331,7 @@ app.get('/', (req, res) => {
                         ));
                     }
                 case '/ans11':
-                    switch(second.toLowerCase){
+                    switch(second.toLowerCase()){
                         case 'lapu-lapu - mobile legends':
                             return client.getProfile(event.source.userId)
                             .then((profile) => replyText(
