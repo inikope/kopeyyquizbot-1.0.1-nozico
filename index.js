@@ -220,7 +220,7 @@ app.get('/', (req, res) => {
                 case '/ans1':
                     switch(second) {
                         case "Fannisa":
-                        return client.getGroupMemberProfile(event.source.userId)
+                        return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 1: ${profile.displayName} benar!`]
@@ -229,7 +229,7 @@ app.get('/', (req, res) => {
                 case '/ans2':
                     switch(second.toLowerCase()) {
                         case "jkt48 - rapsodi":
-                        return client.getGroupMemberProfile(event.source.userId)
+                        return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 2: ${profile.displayName} benar!`]
@@ -238,7 +238,7 @@ app.get('/', (req, res) => {
                 case '/ans3':
                     switch(second.toLowerCase()) {
                         case "lost sky - where we started":
-                        return client.getGroupMemberProfile(event.source.userId)
+                        return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 3: ${profile.displayName} benar!`]
@@ -247,7 +247,7 @@ app.get('/', (req, res) => {
                 case '/ans4':
                     switch(second.toLowerCase()) {
                         case "kayang":
-                        return client.getGroupMemberProfile(event.source.userId)
+                        return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 4: ${profile.displayName} benar!`]
@@ -256,7 +256,7 @@ app.get('/', (req, res) => {
                 case '/ans5':
                     switch(second.toLowerCase()){
                     case "ariana grande - god is a woman":
-                        return client.getGroupMemberProfile(event.source.userId)
+                        return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 5: ${profile.displayName} benar!`]
@@ -265,7 +265,7 @@ app.get('/', (req, res) => {
                 case '/ans6':
                     switch(second.toLowerCase()){
                     case "daniel kawadatha - black lies":
-                        return client.getGroupMemberProfile(event.source.userId)
+                        return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 6: ${profile.displayName} benar!`]
@@ -274,13 +274,13 @@ app.get('/', (req, res) => {
                 case '/ans7':
                     switch(second.toLowerCase()){
                         case 'sak tenane ra ngapusi isih tresno sliramu':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal 7: ${profile.displayName} benar!`]
                             ));
                         case 'sak tenane rak ngapusi isih tresno sliramu':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal 7: ${profile.displayName} benar!`]
@@ -289,13 +289,13 @@ app.get('/', (req, res) => {
                 case '/ans8':
                     switch(second.toLowerCase()){
                         case 'toilet bound hanako kun':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal 8: ${profile.displayName} benar!`]
                             ));
                         case 'toilet bound hanako-kun':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal 8: ${profile.displayName} benar!`]
@@ -304,19 +304,19 @@ app.get('/', (req, res) => {
                 case '/ans9':
                     switch(second.toLowerCase()){
                         case 'bloomiz':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal 9: ${profile.displayName} benar!`]
                             ));
                         case 'bloom*iz':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal 9: ${profile.displayName} benar!`]
                             ));
                         case 'bloom iz':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal 9: ${profile.displayName} benar!`]
@@ -325,7 +325,7 @@ app.get('/', (req, res) => {
                 case '/ans10':
                     switch(second.toLowerCase()){
                         case "diani amalia ramadhani":
-                        return client.getGroupMemberProfile(event.source.userId)
+                        return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                         .then((profile) => replyText(
                             event.replyToken,
                             [ `Soal 10: ${profile.displayName} benar!`]
@@ -334,19 +334,19 @@ app.get('/', (req, res) => {
                 case '/ans11':
                     switch(second.toLowerCase()){
                         case 'lapu-lapu - mobile legends':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal BONUS: ${profile.displayName} benar!`]
                             ));
                         case 'lapu lapu - mobile legends':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal BONUS: ${profile.displayName} benar!`]
                             ));
                         case 'lapulapu - mobile legends':
-                            return client.getGroupMemberProfile(event.source.userId)
+                            return client.getGroupMemberProfile(event.source.groupId, event.source.userId)
                             .then((profile) => replyText(
                                 event.replyToken,
                                 [ `Soal BONUS: ${profile.displayName} benar!`]
