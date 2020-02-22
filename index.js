@@ -210,8 +210,7 @@ app.get('/', (req, res) => {
                         })
                 }
             }
-        } else {
-            if(receivedMessage.includes(" ")){
+        } else if(receivedMessage.includes(" ")){
             var index = receivedMessage.indexOf(' ');
             var [first, second] = [receivedMessage.slice(0, index), receivedMessage.slice(index + 1)];
             switch (first){
