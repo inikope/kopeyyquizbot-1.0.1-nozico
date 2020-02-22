@@ -214,7 +214,7 @@ app.get('/', (req, res) => {
             var index = receivedMessage.indexOf(' ');
             var [first, second] = [receivedMessage.slice(0, index), receivedMessage.slice(index + 1)];
             console.log("first: "+first );
-            console.log("second: "+second );
+            console.log("second: "+second.toLowerCase );
             switch (first){
                 case '/ans1':
                     switch(second) {
