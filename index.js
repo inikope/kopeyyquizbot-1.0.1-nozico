@@ -362,7 +362,6 @@ app.get('/', (req, res) => {
         }
     }
   }
-  }  
   // listen on port
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
