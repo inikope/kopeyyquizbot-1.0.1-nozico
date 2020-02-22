@@ -166,13 +166,14 @@ app.get('/', (req, res) => {
 	if (event.type === 'follow'){
 		return replyText(event.replyToken, Nyolot);
     } else if (event.type === 'join') {
-        return replyText(event.replyToken, introKuis);
+//        return replyText(event.replyToken, introKuis);
+        return Promise.resolve(null);
     } else if (event.type !== 'message' || event.message.type !== 'text') {
       // ignore non-text-message event
         return Promise.resolve(null);
     } else {
         const receivedMessage = event.message.text;
-        if (event.source.userId === "=U9f741c3b49c25d3f698fa228a5fb3380") {
+        if (event.source.userId === "U9f741c3b49c25d3f698fa228a5fb3380") {
             // Admin only chat function
             if (receivedMessage.split(" ").length === 2){
                 const splitText = receivedMessage.split(" ");
@@ -216,6 +217,8 @@ app.get('/', (req, res) => {
             console.log("first: "+first );
             console.log("second: "+second.toLowerCase() );
             switch (first){
+                case '/nyolot':
+                    return replyText(event.replyToken, NyolotBalik + second);
                 case '/ans1':
                     switch(second) {
                         case "Fannisa":
