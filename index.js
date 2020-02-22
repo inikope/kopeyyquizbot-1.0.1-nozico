@@ -299,10 +299,6 @@ app.get('/', (req, res) => {
                                 [ `Soal 8: ${profile.displayName} benar!`]
                             ));
                     }
-                case '/soal':
-                    return replyText(event.replyToken, gwPinter);
-                case '/start':
-                    return replyText(event.replyToken, gwPinter);
                 case '/ans9':
                     switch(second.toLowerCase){
                         case 'bloomiz':
