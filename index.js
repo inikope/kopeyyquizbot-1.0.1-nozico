@@ -216,7 +216,12 @@ app.get('/', (req, res) => {
             var [first, second] = [receivedMessage.slice(0, index), receivedMessage.slice(index + 1)];
             switch (first){
                 case '/nyolot':
+		return client.getGroupMemberProfile(event.source.groupId, event.source.userId).then((profile) =>
+			if(profile.displayName === 'Zicola Vladimir'){
+			return replyText(event.replyToken, NyolotBalik + "zico");
+		} else {
                     return replyText(event.replyToken, NyolotBalik + second);
+		}
                 case '/ans1':
                     switch(second) {
                         case "Fannisa":
